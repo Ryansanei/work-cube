@@ -1,0 +1,17 @@
+[project]
+name = "work-cube"
+version = "0.1.0"
+requires-python = ">=3.12"
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.flake8-bugbear]
+extend-immutable-calls = ["fastapi.File", "fastapi.Query", "fastapi.Depends"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"

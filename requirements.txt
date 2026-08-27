@@ -1,0 +1,35 @@
+# Ingestion
+docling==2.120.3
+
+# Orchestration (Phase 2)
+langgraph==1.2.11
+
+# Model backend abstraction — local Ollama by default, hosted API override
+litellm==1.97.0
+
+# Web / API
+fastapi==0.121.0
+uvicorn[standard]==0.40.0
+pydantic==2.13.4
+pydantic-settings==2.15.0
+
+# Data
+sqlalchemy==2.0.44
+psycopg[binary]==3.2.10
+pgvector==0.4.1
+
+# Dev / test
+pytest==8.4.1
+pytest-asyncio==0.26.0
+httpx==0.28.1
+ruff==0.9.6
+faker==40.36.0
+reportlab==4.2.5
+pymupdf==1.25.5
+python-multipart==0.0.20
+
+# Manifest upload — pinned explicitly even though Docling also pulls it in
+# transitively, since app/ingestion/manifest.py imports it directly and
+# shouldn't depend on Docling's dependency tree happening to include it.
+openpyxl==3.1.5
+cryptography==44.0.0

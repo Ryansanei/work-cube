@@ -1,0 +1,673 @@
+{
+  "run_at": "2026-08-18T17:50:18.805842+00:00",
+  "n_documents": 40,
+  "status_accuracy": 1.0,
+  "amount_accuracy": 1.0,
+  "mean_field_extraction_accuracy": 1.0,
+  "hitl_routing_accuracy": 1.0,
+  "by_category": {
+    "arithmetic_only": {
+      "n": 4,
+      "status_correct": 4
+    },
+    "clean_match": {
+      "n": 15,
+      "status_correct": 15
+    },
+    "temporal_mismatch": {
+      "n": 6,
+      "status_correct": 6
+    },
+    "exemption_error": {
+      "n": 6,
+      "status_correct": 6
+    },
+    "needs_review": {
+      "n": 3,
+      "status_correct": 3
+    },
+    "classification_error": {
+      "n": 6,
+      "status_correct": 6
+    }
+  },
+  "per_document": [
+    {
+      "filename": "doc_001.pdf",
+      "ground_truth_category": "arithmetic_only",
+      "expected_status": "discrepancy_found",
+      "actual_status": "discrepancy_found",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_002.pdf",
+      "ground_truth_category": "clean_match",
+      "expected_status": "clean_match",
+      "actual_status": "clean_match",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_003.pdf",
+      "ground_truth_category": "temporal_mismatch",
+      "expected_status": "discrepancy_found",
+      "actual_status": "discrepancy_found",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_004.pdf",
+      "ground_truth_category": "clean_match",
+      "expected_status": "clean_match",
+      "actual_status": "clean_match",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_005.pdf",
+      "ground_truth_category": "exemption_error",
+      "expected_status": "discrepancy_found",
+      "actual_status": "discrepancy_found",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_006.pdf",
+      "ground_truth_category": "exemption_error",
+      "expected_status": "discrepancy_found",
+      "actual_status": "discrepancy_found",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_007.pdf",
+      "ground_truth_category": "clean_match",
+      "expected_status": "clean_match",
+      "actual_status": "clean_match",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_008.pdf",
+      "ground_truth_category": "needs_review",
+      "expected_status": "needs_review",
+      "actual_status": "needs_review",
+      "status_correct": true,
+      "amount_correct": null,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_009.pdf",
+      "ground_truth_category": "temporal_mismatch",
+      "expected_status": "discrepancy_found",
+      "actual_status": "discrepancy_found",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_010.pdf",
+      "ground_truth_category": "classification_error",
+      "expected_status": "discrepancy_found",
+      "actual_status": "discrepancy_found",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_011.pdf",
+      "ground_truth_category": "classification_error",
+      "expected_status": "discrepancy_found",
+      "actual_status": "discrepancy_found",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_012.pdf",
+      "ground_truth_category": "clean_match",
+      "expected_status": "clean_match",
+      "actual_status": "clean_match",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_013.pdf",
+      "ground_truth_category": "clean_match",
+      "expected_status": "clean_match",
+      "actual_status": "clean_match",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_014.pdf",
+      "ground_truth_category": "classification_error",
+      "expected_status": "discrepancy_found",
+      "actual_status": "discrepancy_found",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_015.pdf",
+      "ground_truth_category": "temporal_mismatch",
+      "expected_status": "discrepancy_found",
+      "actual_status": "discrepancy_found",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_016.pdf",
+      "ground_truth_category": "clean_match",
+      "expected_status": "clean_match",
+      "actual_status": "clean_match",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_017.pdf",
+      "ground_truth_category": "arithmetic_only",
+      "expected_status": "discrepancy_found",
+      "actual_status": "discrepancy_found",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_018.pdf",
+      "ground_truth_category": "classification_error",
+      "expected_status": "discrepancy_found",
+      "actual_status": "discrepancy_found",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_019.pdf",
+      "ground_truth_category": "needs_review",
+      "expected_status": "needs_review",
+      "actual_status": "needs_review",
+      "status_correct": true,
+      "amount_correct": null,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true
+      }
+    },
+    {
+      "filename": "doc_020.pdf",
+      "ground_truth_category": "clean_match",
+      "expected_status": "clean_match",
+      "actual_status": "clean_match",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_021.pdf",
+      "ground_truth_category": "clean_match",
+      "expected_status": "clean_match",
+      "actual_status": "clean_match",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_022.pdf",
+      "ground_truth_category": "temporal_mismatch",
+      "expected_status": "discrepancy_found",
+      "actual_status": "discrepancy_found",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_023.pdf",
+      "ground_truth_category": "clean_match",
+      "expected_status": "clean_match",
+      "actual_status": "clean_match",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_024.pdf",
+      "ground_truth_category": "needs_review",
+      "expected_status": "needs_review",
+      "actual_status": "needs_review",
+      "status_correct": true,
+      "amount_correct": null,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_025.pdf",
+      "ground_truth_category": "classification_error",
+      "expected_status": "discrepancy_found",
+      "actual_status": "discrepancy_found",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_026.pdf",
+      "ground_truth_category": "classification_error",
+      "expected_status": "discrepancy_found",
+      "actual_status": "discrepancy_found",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_027.pdf",
+      "ground_truth_category": "temporal_mismatch",
+      "expected_status": "discrepancy_found",
+      "actual_status": "discrepancy_found",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_028.pdf",
+      "ground_truth_category": "temporal_mismatch",
+      "expected_status": "discrepancy_found",
+      "actual_status": "discrepancy_found",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_029.pdf",
+      "ground_truth_category": "clean_match",
+      "expected_status": "clean_match",
+      "actual_status": "clean_match",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_030.pdf",
+      "ground_truth_category": "clean_match",
+      "expected_status": "clean_match",
+      "actual_status": "clean_match",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_031.pdf",
+      "ground_truth_category": "arithmetic_only",
+      "expected_status": "discrepancy_found",
+      "actual_status": "discrepancy_found",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_032.pdf",
+      "ground_truth_category": "exemption_error",
+      "expected_status": "discrepancy_found",
+      "actual_status": "discrepancy_found",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_033.pdf",
+      "ground_truth_category": "arithmetic_only",
+      "expected_status": "discrepancy_found",
+      "actual_status": "discrepancy_found",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_034.pdf",
+      "ground_truth_category": "clean_match",
+      "expected_status": "clean_match",
+      "actual_status": "clean_match",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_035.pdf",
+      "ground_truth_category": "clean_match",
+      "expected_status": "clean_match",
+      "actual_status": "clean_match",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_036.pdf",
+      "ground_truth_category": "clean_match",
+      "expected_status": "clean_match",
+      "actual_status": "clean_match",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_037.pdf",
+      "ground_truth_category": "exemption_error",
+      "expected_status": "discrepancy_found",
+      "actual_status": "discrepancy_found",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_038.pdf",
+      "ground_truth_category": "clean_match",
+      "expected_status": "clean_match",
+      "actual_status": "clean_match",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_039.pdf",
+      "ground_truth_category": "exemption_error",
+      "expected_status": "discrepancy_found",
+      "actual_status": "discrepancy_found",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    },
+    {
+      "filename": "doc_040.pdf",
+      "ground_truth_category": "exemption_error",
+      "expected_status": "discrepancy_found",
+      "actual_status": "discrepancy_found",
+      "status_correct": true,
+      "amount_correct": true,
+      "field_accuracy": 1.0,
+      "field_results": {
+        "shipment_date": true,
+        "cargo_class": true,
+        "vehicle_class": true,
+        "weight_kg": true,
+        "distance_km": true
+      }
+    }
+  ]
+}

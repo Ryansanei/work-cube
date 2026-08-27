@@ -1,0 +1,42 @@
+services:
+  postgres:
+    image: pgvector/pgvector:pg17
+    environment:
+      POSTGRES_DB: work_cube
+      POSTGRES_USER: work_cube
+      POSTGRES_PASSWORD: work_cube
+    ports:
+      - "55433:5432"
+    volumes:
+      - work_cube_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U work_cube"]
+      interval: 2s
+      timeout: 3s
+      retries: 20
+
+  app:
+    build: .
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "8010:8010"
+    environment:
+      DATABASE_URL: postgresql+psycopg://work_cube:work_cube@postgres:5432/work_cube
+      WORK_CUBE_LLM_MODEL: ollama/llama3.2:1b
+      WORK_CUBE_EMBEDDING_MODEL: ollama/nomic-embed-text
+      # Hardcoded, not ${OLLAMA_API_BASE:-...} — Compose auto-loads this
+      # project's .env for variable substitution, and that .env sets
+      # OLLAMA_API_BASE=http://localhost:11434 for *local, non-Docker* runs.
+      # Interpolating it here would silently point the container at its own
+      # localhost (no Ollama there) instead of the host's — verified this
+      # break directly, not a hypothetical. To use a different Ollama
+      # address in Docker (e.g. on Linux, or a remote Ollama), override this
+      # value directly in a docker-compose.override.yml, not via .env.
+      OLLAMA_API_BASE: http://host.docker.internal:11434
+    volumes:
+      - ./data:/app/data
+
+volumes:
+  work_cube_pgdata:
